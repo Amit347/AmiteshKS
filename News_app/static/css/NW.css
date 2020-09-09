@@ -1,0 +1,10 @@
+body {
+ background-image: url(https://images.unsplash.com/photo-1588455471455-4b28e9ab3cd5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1103&q=80);
+ background-size: cover;
+
+}
+
+.jumbotron {
+
+   color: green;
+}

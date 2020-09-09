@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>NEWS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/NW.css" %}">
+  </head>
+  <body>
+  <div class="">
+
+  <div>
+    <div class="container">
+      <div class="jumbotron" aling : center>
+         <div class="container">
+        <h1>Welcome News Network</h1>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Sports News</a>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Business News</a>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Political News</a>
+      </div>
+        </div>
+           </div>
+              </div>
+
+    <img src="{" % static '/News_app/static/images/amit.jpg' % "}">
+
+    <h1>employee information</h1><hr>
+     {% if employee  %}
+      <table border="3">
+        <thead>
+          <th>employee number</th>
+          <th>employee name</th>
+          <th>employee salary</th>
+          <th>employee department</th>
+          <th>employee address</th>
+        </thead>
+        {% for emp in employee %}
+         <tr>
+           <td>{emp_num}</td>
+           <td>{emp_name}</td>
+           <td>{emp_sal}</td>
+           <td>{emp_dept}</td>
+           <td>{emp_add}</td>
+         </tr>
+          {%endfor%}
+
+      </table>
+      {%else%}
+       <p>No employee Recods found !</p>
+       {%endif%}
+
+  </body>
+</html>

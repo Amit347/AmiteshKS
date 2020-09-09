@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>employee information</h1><hr>
+     {% if employees  %}
+      <table border="2">
+        <thead>
+          <th>employee number</th>
+          <th>employee name</th>
+          <th>employee salary</th>
+          <th>employee department</th>
+          <th>employee address</th>
+        </thead>
+        {% for emp in employees %}
+         <tr>
+           <td>{{emp.emp_num}}</td>
+           <td>{{emp.emp_name}}</td>
+           <td>{{emp.emp_sal}}</td>
+           <td>{{emp.emp_dept}}</td>
+           <td>{{emp.emp_add}}</td>
+         </tr>
+          {%endfor%}
+
+      </table>
+      {%else%}
+       <p>No employee Recods found !</p>
+       {%endif%}
+  </body>
+</html>
